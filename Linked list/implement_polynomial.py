@@ -8,7 +8,7 @@ class Polynomial:
     def __init__(self):
         self.head = None  # Start with an empty polynomial
 
-    def add_term(self, coeff, exp):
+    def add_at_head(self, coeff, exp):
         new_node = Node(coeff, exp)
         if not self.head:  
             self.head = new_node  # First term
@@ -18,7 +18,7 @@ class Polynomial:
                 temp = temp.next
             temp.next = new_node  # Append new term at the end
 
-    def display(self):
+    def print_poly(self):
         temp = self.head
         while temp:
             print(f"{temp.coeff}x^{temp.exp}", end=" → ")
@@ -26,10 +26,10 @@ class Polynomial:
         print("None")
 # Create a polynomial: 3x² + 5x + 2
 poly = Polynomial()
-poly.add_term(3, 2)
-poly.add_term(5, 1)
-poly.add_term(2, 0)
+poly.add_at_head(3, 2)
+poly.add_at_head(5, 1)
+poly.add_at_head(2, 0)
 
 # Display the polynomial
 print("Polynomial:")
-poly.display()
+poly.print_poly()
