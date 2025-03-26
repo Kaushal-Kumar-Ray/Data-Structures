@@ -21,7 +21,7 @@ class Polynomial:
     def print_poly(self):
         temp = self.head
         while temp:
-            print(f"{temp.coeff}x^{temp.exp}", end=" → ")
+            print(f"{temp.coeff}x^{temp.exp}", end=" + ")
             temp = temp.next
         print("None")
 # Create a polynomial: 3x² + 5x + 2

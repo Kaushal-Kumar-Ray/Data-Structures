@@ -1,12 +1,3 @@
-'''Josephus Problem
-The Josephus problem is a theoretical problem related to a certain elimination game:
-
-n people stand in a circle.
-
-Every k-th person is eliminated in each step.
-
-The last remaining person is the survivor.
-'''
 
 class Node:
     def __init__(self, data):
