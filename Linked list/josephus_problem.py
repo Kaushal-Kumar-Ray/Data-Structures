@@ -35,11 +35,10 @@ class CircularLinkedList:
             temp.next = temp.next.next  # Skip eliminated person
 
         return temp.data  # Last remaining person
-
-
+    
 # **Example:**
 cll = CircularLinkedList()
-for i in range(1, 8):  # 7 people
+for i in range(1, 8):  # 7 peopl
     cll.append(i)
 
 survivor = cll.josephus(3)  # k = 3 (every 3rd person eliminated)
