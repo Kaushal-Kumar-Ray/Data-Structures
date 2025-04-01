@@ -12,8 +12,8 @@ for i in range (n):
         min=l[i]
 print(max,min)
 # Initialize second max and second min
-smax=-1000
-smin=1000
+smax=min
+smin=max
 for i in range(n):
     if l[i]>smax and l[i]!=max:
         smax=l[i]
