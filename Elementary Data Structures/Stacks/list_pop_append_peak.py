@@ -17,9 +17,6 @@ print("Top element:", stack[-1])  # Output: 10
 # Pop elements
 print("Popped:", stack.pop())
 
-
-
-
 # Try to peek on empty stack
 if stack:
     print("Top element:", stack[-1])
