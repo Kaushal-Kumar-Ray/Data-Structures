@@ -6,17 +6,15 @@ for i in range(n):
 max =l[0]
 min=l[0]
 for i in range (n):
-    if l[i]>max:
+    if l[i]>max:    #  max_v= max(l)
         max=l[i]
-    if l[i]<min:
+    if l[i]<min:    # min_v=min(l)
         min=l[i]
-print(max,min)
-# Initialize second max and second min
-smax=min
-smin=max
+smax=0
+smin=1000
 for i in range(n):
     if l[i]>smax and l[i]!=max:
         smax=l[i]
     if l[i]<smin and l[i]!=min:
         smin=l[i]
-print(smax,smin)
+print(f"Second max:{smax} & second min:{smin}")
