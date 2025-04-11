@@ -10,15 +10,16 @@ class Polynomial:
 
     def add_at_head(self, coeff, exp):
         new_node = Node(coeff, exp)
-        if not self.head:  
-            self.head = new_node  # First term
-        else:
+        if  self.head:
             temp = self.head
             while temp.next:
                 temp = temp.next
-            temp.next = new_node  # Append new term at the end
+            temp.next = new_node   
+             # # Append new term at the end
+        else:  
+            self.head = new_node# First term
 
-    def print_poly(self):
+    def disp(self):
         temp = self.head
         while temp:
             print(f"{temp.coeff}x^{temp.exp}", end=" + ")
@@ -32,4 +33,4 @@ poly.add_at_head(2, 0)
 
 # Display the polynomial
 print("Polynomial:")
-poly.print_poly()
+poly.disp()

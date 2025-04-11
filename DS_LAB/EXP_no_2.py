@@ -10,8 +10,8 @@ for i in range (n):
         max=l[i]
     if l[i]<min:    # min_v=min(l)
         min=l[i]
-smax=0
-smin=1000
+smax=min
+smin=max
 for i in range(n):
     if l[i]>smax and l[i]!=max:
         smax=l[i]
