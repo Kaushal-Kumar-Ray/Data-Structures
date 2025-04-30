@@ -1,4 +1,4 @@
-"""class Node:
+class Node:
     def __init__(self, data,next=None):
         self.data=data
         self.next=next
@@ -106,7 +106,4 @@ while 1:
     else:
         print("Invalid choice, please try again")
         
-        """
-l=[1,5,4,12,7,0,4,5,0,1]
-set_var=set(l)
-print(set_var)
+       

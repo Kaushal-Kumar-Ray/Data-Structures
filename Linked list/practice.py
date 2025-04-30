@@ -3,41 +3,52 @@ class Node:
         self.data = data
         self.next = None
 
-class LinkedList:
+class SinglyLinkedList:
     def __init__(self):
         self.head = None
-        
-    def add_at_head(self, new_data):
-        new_node = Node(new_data)
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
-        
-    def reverse(self):
-        prev = None
-        curr = self.head
-        while curr:
-            next_node = curr.next  # Corrected variable name
-            curr.next = prev
-            prev = curr
-            curr = next_node
-        self.head = prev
-    
-    def print(self):
-        temp = self.head
-        while temp:
-            print(temp.data, end="->")
-            temp = temp.next
-        print(None)
-        
-ll = LinkedList()
-ll.add_at_head(30)
-ll.add_at_head(20)
-ll.add_at_head(10)
 
-print("Original List:")
-ll.print()
+    def insert_after_node(self, prev_node, data):
+        if not prev_node:
+            print("Previous node not found.")
+            return
+        new_node = Node(data)
+        new_node.next = prev_node.next
+        prev_node.next = new_node
 
-# Reverse the linked list
-print("Reversed List:")
-ll.reverse()
-ll.print()
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+# Example Usage
+ll = SinglyLinkedList()
+
+# Insert at beginning
+ll.insert_at_beginning(10)
+ll.insert_at_beginning(5)
+
+# Insert at end
+ll.insert_at_end(20)
+
+# Insert after first node (after 5)
+ll.insert_after_node(ll.head, 7)
+
+# Display the linked list
+ll.display()
